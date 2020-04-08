@@ -1,0 +1,2 @@
+class HelpfulItem < ApplicationRecord
+end

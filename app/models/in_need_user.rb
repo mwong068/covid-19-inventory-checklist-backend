@@ -1,0 +1,2 @@
+class InNeedUser < ApplicationRecord
+end
