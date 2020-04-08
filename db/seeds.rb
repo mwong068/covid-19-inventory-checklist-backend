@@ -6,4 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-HelpfulUser.create(name: )
+dude = HelpfulUser.create(name: "Nice Guy", location: "San Francisco", family_size: 4, has_children: true, can_deliver: true)
+stuff = Category.create(name: "Toiletries", description: "Any items that are necessary for self care")
+HelpfulItem.create(name: "Toothbrush", quantity: 2, description: "Two children's toothbrushes", availability: "Can send ASAP", helpful_user_id: dude.id, category_id: stuff.id)
+
+person = InNeedUser.create(name: "Another Nice Guy", location: "San Jose", family_size: 4, has_children: true, can_pickup: true)
+NeededItem.create(name: "Toothbrush", quantity: 2, description: "Need two toothbrushes for my two children", urgency: "Whenever available, no rush", in_need_user_id: person.id, category_id: stuff.id)
+
+Message.create(message_text: "Hey, I saw that you are in need of two children's toothbrushes. I have two I can give you, would you like me to drop them off to you? Let me know when you have a chance, thanks.", helpful_user_id: dude.id, in_need_user_id: person.id)
