@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 2020_04_08_211908) do
   end
 
   create_table "helpful_users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "email"
     t.string "name"
     t.string "location"
     t.integer "family_size"
@@ -44,6 +47,9 @@ ActiveRecord::Schema.define(version: 2020_04_08_211908) do
   end
 
   create_table "in_need_users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "email"
     t.string "name"
     t.string "location"
     t.integer "family_size"
