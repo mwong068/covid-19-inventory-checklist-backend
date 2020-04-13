@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :categories
  
   post '/login', to: 'auth#create'
-  get 'profile', to: 'helpful_users#profile'
+  get '/profile', to: 'helpful_users#profile'
 end
