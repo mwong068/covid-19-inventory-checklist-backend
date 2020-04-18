@@ -10,4 +10,15 @@ class HelpfulItemsController < ApplicationController
         render json: @item
     end
 
+    def create
+        @item = HelpfulItem.create(item_params)
+        render json: @item
+    end
+
+    private
+
+    def item_params
+        params.require(:helpful_item).permit(:name, :quantity, :description, :availability, :helpful_user_id, :category_id)
+    end
+
 end
