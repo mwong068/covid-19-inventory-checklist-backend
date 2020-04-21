@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :helpful_users, only: [:create]
   resources :in_need_users
   resources :categories
+  resources :helpful_items
  
   post '/login', to: 'auth#create'
   get '/profile', to: 'helpful_users#profile'
