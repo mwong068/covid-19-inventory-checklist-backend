@@ -7,7 +7,7 @@ class HelpfulItemsController < ApplicationController
 
     def show
         @item = HelpfulItem.find(params[:id])
-        render json: @item
+        render json: { user: HelpfulUserSerializer.new(@item) }
     end
 
     def create
