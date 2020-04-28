@@ -7,4 +7,7 @@ Rails.application.routes.draw do
  
   post '/login', to: 'auth#create'
   get '/profile', to: 'helpful_users#profile'
+
+  get '/message', to: 'twilio#send_message'
+
 end
