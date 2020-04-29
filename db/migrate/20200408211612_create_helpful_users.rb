@@ -7,6 +7,7 @@ class CreateHelpfulUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :location
       t.integer :family_size
+      t.integer :phone_number
       t.boolean :has_children
       t.boolean :can_deliver
 

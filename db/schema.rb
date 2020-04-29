@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_211908) do
     t.string "name"
     t.string "location"
     t.integer "family_size"
+    t.integer "phone_number"
     t.boolean "has_children"
     t.boolean "can_deliver"
     t.datetime "created_at", precision: 6, null: false
