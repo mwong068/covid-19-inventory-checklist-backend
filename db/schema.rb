@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_211908) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_211908) do
     t.integer "quantity"
     t.string "description"
     t.string "availability"
+    t.string "image_url"
     t.integer "helpful_user_id"
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false

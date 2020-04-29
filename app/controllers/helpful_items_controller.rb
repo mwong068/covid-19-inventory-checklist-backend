@@ -18,7 +18,7 @@ class HelpfulItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:helpful_item).permit(:name, :quantity, :description, :availability, :helpful_user_id, :category_id)
+        params.require(:helpful_item).permit(:name, :quantity, :description, :availability, :image_url, :helpful_user_id, :category_id)
     end
 
 end

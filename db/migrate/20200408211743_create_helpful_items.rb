@@ -5,6 +5,7 @@ class CreateHelpfulItems < ActiveRecord::Migration[6.0]
       t.integer :quantity
       t.string :description
       t.string :availability
+      t.string :image_url
       t.integer :helpful_user_id
       t.integer :category_id
 
