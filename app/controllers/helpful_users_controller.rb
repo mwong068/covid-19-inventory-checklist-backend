@@ -1,5 +1,5 @@
 class HelpfulUsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :index]
     
     def index
         @users = HelpfulUser.all
